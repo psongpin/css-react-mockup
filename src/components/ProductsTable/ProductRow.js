@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
 import Checkbox from "./Checkbox";
+import ProductModal from "./ProductModal";
+import ProductInfo from "./ProductInfo";
 import { formatPrice } from "../../utils/price";
 import { formatPercentage } from "../../utils/percentage";
-import ProductInfo from "./ProductInfo";
 import iconset from "../../images/iconset2.png";
 
 const Td = styled.td`
@@ -47,7 +48,28 @@ export const Text = styled.span`
   font-weight: ${({ weight }) => weight};
 `;
 
+const ViewButton = styled.button`
+  display: block;
+  margin: 10px auto 0;
+  color: ${({ theme }) => theme.colors.primary};
+  font-weight: 700;
+  padding: 8px 20px;
+  border: 1px solid;
+  border-color: ${({ theme }) => theme.colors.primary};
+  border-radius: 15px;
+  background: transparent;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+`;
+
 const ProductRow = ({ product }) => {
+  const [isModalVisible, setModalVisible] = useState(false);
+
+  const openModal = () => setModalVisible(true);
+  const closeModal = () => setModalVisible(false);
+
   return (
     <tr>
       <Td align="left">
@@ -55,6 +77,12 @@ const ProductRow = ({ product }) => {
       </Td>
       <Td align="left">
         <ProductInfo name={product.name} image={product.image} />
+        <ViewButton onClick={openModal}>View Info</ViewButton>
+        <ProductModal
+          visible={isModalVisible}
+          closeModal={closeModal}
+          product={product}
+        />
       </Td>
       <Td>
         <Text>{product.kpi}</Text>

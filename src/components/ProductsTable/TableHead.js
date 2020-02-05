@@ -82,7 +82,7 @@ const TableHead = () => {
     { id: "Select All", content: <Checkbox /> },
     {
       id: "Product Information",
-      content: <HeadContent content="Product Information" />
+      content: "Product Information"
     },
     { id: "KPI", content: <HeadContent content="KPI" /> },
     { id: "Avg Price", content: <HeadContent content="Avg Price" /> },
