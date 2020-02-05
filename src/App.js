@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import styled, { ThemeProvider } from "styled-components";
+import { Normalize } from "styled-normalize";
+
+import ProductTable from "./components/ProductsTable";
+import theme from "./theme";
+import products from "./data/products";
+
+const Main = styled.main`
+  background-color: ${({ theme }) => theme.colors.mainBackground};
+  padding: 30px 15px;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Normalize />
+      <Main>
+        <ProductTable data={products} />
+      </Main>
+    </ThemeProvider>
   );
 }
 
