@@ -9,6 +9,9 @@ const Table = styled.table`
   width: 100%;
   max-width: 1450px;
   margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+  color: ${({ theme }) => theme.colors.text};
 `;
 
 const ProductTable = ({ data }) => {

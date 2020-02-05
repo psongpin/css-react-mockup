@@ -1,3 +1,5 @@
+import productImage from "../images/productImage.png";
+
 export default [
   {
     id: 1,
@@ -12,7 +14,8 @@ export default [
     avgDailyRank: 9.3,
     reviews: 9.3,
     rating: 9.3,
-    dimension: 9.3
+    dimension: 9.3,
+    image: productImage
   },
   {
     id: 2,
@@ -27,7 +30,8 @@ export default [
     avgDailyRank: 9.3,
     reviews: 9.3,
     rating: 9.3,
-    dimension: 9.3
+    dimension: 9.3,
+    image: productImage
   },
   {
     id: 3,
@@ -42,7 +46,8 @@ export default [
     avgDailyRank: 9.3,
     reviews: 9.3,
     rating: 9.3,
-    dimension: 9.3
+    dimension: 9.3,
+    image: productImage
   },
   {
     id: 4,
@@ -57,7 +62,8 @@ export default [
     avgDailyRank: 9.3,
     reviews: 9.3,
     rating: 9.3,
-    dimension: 9.3
+    dimension: 9.3,
+    image: productImage
   },
   {
     id: 5,
@@ -72,7 +78,8 @@ export default [
     avgDailyRank: 9.3,
     reviews: 9.3,
     rating: 9.3,
-    dimension: 9.3
+    dimension: 9.3,
+    image: productImage
   },
   {
     id: 6,
@@ -87,7 +94,8 @@ export default [
     avgDailyRank: 9.3,
     reviews: 9.3,
     rating: 9.3,
-    dimension: 9.3
+    dimension: 9.3,
+    image: productImage
   },
   {
     id: 7,
@@ -102,7 +110,8 @@ export default [
     avgDailyRank: 9.3,
     reviews: 9.3,
     rating: 9.3,
-    dimension: 9.3
+    dimension: 9.3,
+    image: productImage
   },
   {
     id: 8,
@@ -117,7 +126,8 @@ export default [
     avgDailyRank: 9.3,
     reviews: 9.3,
     rating: 9.3,
-    dimension: 9.3
+    dimension: 9.3,
+    image: productImage
   },
   {
     id: 9,
@@ -132,7 +142,8 @@ export default [
     avgDailyRank: 9.3,
     reviews: 9.3,
     rating: 9.3,
-    dimension: 9.3
+    dimension: 9.3,
+    image: productImage
   },
   {
     id: 10,
@@ -147,7 +158,8 @@ export default [
     avgDailyRank: 9.3,
     reviews: 9.3,
     rating: 9.3,
-    dimension: 9.3
+    dimension: 9.3,
+    image: productImage
   },
   {
     id: 11,
@@ -162,7 +174,8 @@ export default [
     avgDailyRank: 9.3,
     reviews: 9.3,
     rating: 9.3,
-    dimension: 9.3
+    dimension: 9.3,
+    image: productImage
   },
   {
     id: 12,
@@ -177,7 +190,8 @@ export default [
     avgDailyRank: 9.3,
     reviews: 9.3,
     rating: 9.3,
-    dimension: 9.3
+    dimension: 9.3,
+    image: productImage
   },
   {
     id: 13,
@@ -192,7 +206,8 @@ export default [
     avgDailyRank: 9.3,
     reviews: 9.3,
     rating: 9.3,
-    dimension: 9.3
+    dimension: 9.3,
+    image: productImage
   },
   {
     id: 14,
@@ -207,6 +222,7 @@ export default [
     avgDailyRank: 9.3,
     reviews: 9.3,
     rating: 9.3,
-    dimension: 9.3
+    dimension: 9.3,
+    image: productImage
   }
 ];
