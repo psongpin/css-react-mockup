@@ -13,7 +13,6 @@ const Td = styled.td`
   border-bottom: 0.5px solid;
   border-color: ${({ theme }) => theme.colors.border};
   padding: 16px 10px;
-  height: 46px;
   text-align: ${({ align }) => align};
 
   &:first-of-type {
