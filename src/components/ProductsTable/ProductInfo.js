@@ -24,7 +24,7 @@ const IconSet = styled.img`
   margin-left: 16px;
 `;
 
-const ProductInfo = ({ name, image, productId = "B078WLH42J" }) => {
+const ProductInfo = ({ name, image, productId }) => {
   return (
     <Flex>
       <ProductImage src={image} alt={name} />
@@ -46,6 +46,14 @@ const ProductInfo = ({ name, image, productId = "B078WLH42J" }) => {
   );
 };
 
-ProductInfo.propTypes = {};
+ProductInfo.defaultProps = {
+  productId: "B078WLH42J"
+};
+
+ProductInfo.propTypes = {
+  name: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  productId: PropTypes.string.isRequired
+};
 
 export default ProductInfo;

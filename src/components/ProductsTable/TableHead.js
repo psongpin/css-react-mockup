@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 
 import Checkbox from "./Checkbox";
@@ -78,7 +77,7 @@ const HeadContent = ({ content }) => (
   </HeadWrap>
 );
 
-const TableHead = props => {
+const TableHead = () => {
   const theads = [
     { id: "Select All", content: <Checkbox /> },
     {

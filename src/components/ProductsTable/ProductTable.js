@@ -35,6 +35,25 @@ const ProductTable = ({ data }) => {
   );
 };
 
-ProductTable.propTypes = {};
+ProductTable.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      name: PropTypes.string,
+      kpi: PropTypes.string,
+      avgPrice: PropTypes.number,
+      avgProfit: PropTypes.number,
+      avgMargin: PropTypes.number,
+      avgDailyUnitSold: PropTypes.number,
+      avgDailyRevenue: PropTypes.number,
+      avgRoi: PropTypes.number,
+      avgDailyRank: PropTypes.number,
+      reviews: PropTypes.number,
+      rating: PropTypes.number,
+      dimension: PropTypes.number,
+      image: PropTypes.string
+    })
+  ).isRequired
+};
 
 export default ProductTable;

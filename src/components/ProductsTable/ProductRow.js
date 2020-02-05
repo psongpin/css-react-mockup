@@ -106,6 +106,23 @@ Text.defaultProps = {
   size: "16px"
 };
 
-ProductRow.propTypes = {};
+ProductRow.propTypes = {
+  product: PropTypes.shape({
+    id: PropTypes.number,
+    name: PropTypes.string,
+    kpi: PropTypes.string,
+    avgPrice: PropTypes.number,
+    avgProfit: PropTypes.number,
+    avgMargin: PropTypes.number,
+    avgDailyUnitSold: PropTypes.number,
+    avgDailyRevenue: PropTypes.number,
+    avgRoi: PropTypes.number,
+    avgDailyRank: PropTypes.number,
+    reviews: PropTypes.number,
+    rating: PropTypes.number,
+    dimension: PropTypes.number,
+    image: PropTypes.string
+  }).isRequired
+};
 
 export default ProductRow;
