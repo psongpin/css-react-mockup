@@ -9,11 +9,22 @@ import iconset from "../../images/iconset1.png";
 const Flex = styled.div`
   display: flex;
   align-items: center;
-  margin: ${({ margin }) => margin};
+`;
+
+const BottomInfo = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 10px 0;
+
+  @media (min-width: 1024px) {
+    flex-wrap: no-wrap;
+  }
 `;
 
 const ProductImage = styled.img`
   margin-right: 15px;
+  max-width: 100%;
 `;
 
 const Flag = styled.img`
@@ -21,7 +32,12 @@ const Flag = styled.img`
 `;
 
 const IconSet = styled.img`
-  margin-left: 16px;
+  margin-top: 10px;
+
+  @media (min-width: 768px) {
+    margin-left: 16px;
+    margin-top: 0px;
+  }
 `;
 
 const ProductInfo = ({ name, image, productId }) => {
@@ -32,7 +48,7 @@ const ProductInfo = ({ name, image, productId }) => {
         <Text type="secondary" size="14px" weight="500">
           {name}
         </Text>
-        <Flex margin="10px 0">
+        <BottomInfo>
           <Flag src={flag} />
 
           <Text type="text" size="14px" weight="500">
@@ -40,7 +56,7 @@ const ProductInfo = ({ name, image, productId }) => {
           </Text>
 
           <IconSet src={iconset} />
-        </Flex>
+        </BottomInfo>
       </div>
     </Flex>
   );
