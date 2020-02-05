@@ -6,15 +6,14 @@ import ProductRow from "./ProductRow";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  width: 100%;
-  max-width: 1450px;
+  width: 1450px;
+  max-width: 100%;
   margin: 0 auto;
   overflow-x: auto;
 `;
 
 const Table = styled.table`
-  width: 1450px;
-
+  width: 100%;
   border-collapse: separate;
   border-spacing: 0 12px;
   color: ${({ theme }) => theme.colors.text};

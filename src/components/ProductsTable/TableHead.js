@@ -13,12 +13,22 @@ const Th = styled.th`
   text-align: center;
   font-size: 14px;
   font-weight: 600;
+  display: none;
+
+  @media (min-width: 1024px) {
+    display: table-cell;
+  }
 
   &:first-of-type {
     border-left: 0.5px solid;
     border-top-left-radius: 11px;
     border-bottom-left-radius: 11px;
     padding-left: 16px;
+    display: table-cell;
+  }
+
+  &:nth-child(2) {
+    display: table-cell;
   }
 
   &:last-of-type {
@@ -26,6 +36,7 @@ const Th = styled.th`
     border-top-right-radius: 11px;
     border-bottom-right-radius: 11px;
     padding-right: 16px;
+    display: table-cell;
   }
 `;
 
