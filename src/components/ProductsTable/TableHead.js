@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import Checkbox from "./Checkbox";
 
@@ -8,7 +8,7 @@ const Th = styled.th`
   border-top: 0.5px solid;
   border-bottom: 0.5px solid;
   border-color: ${({ theme }) => theme.colors.border};
-  padding: 0 10px;
+  padding: 5px 10px;
   height: 46px;
   text-align: center;
   font-size: 14px;
@@ -29,23 +29,78 @@ const Th = styled.th`
   }
 `;
 
+const HeadWrap = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const Flex = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+`;
+
+const Arrow = styled.div`
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  ${({ direction }) =>
+    direction === "up"
+      ? css`
+          border-bottom: 5px solid black;
+          margin-bottom: 4px;
+        `
+      : "border-top: 5px solid black"};
+`;
+
+const HeadContent = ({ content }) => (
+  <HeadWrap>
+    <span>{content}</span>
+    <Flex>
+      <Arrow direction="up" />
+      <Arrow direction="down" />
+    </Flex>
+  </HeadWrap>
+);
+
 const TableHead = props => {
   const theads = [
     { id: "Select All", content: <Checkbox /> },
-    { id: "Product Information", content: "Product Information" },
-    { id: "KPI", content: "KPI" },
-    { id: "Avg Price", content: "Avg Price" },
-    { id: "Avg Profit", content: "Avg Profit" },
-    { id: "Avg Margin", content: "Avg Margin" },
-    { id: "Avg Daily Unit Sold", content: "Avg Daily Unit Sold" },
-    { id: "Avg Daily Revenue", content: "Avg Daily Revenue" },
-    { id: "Avg ROI", content: "Avg ROI" },
-    { id: "Avg Daily Rank", content: "Avg Daily Rank" },
-    { id: "Reviews", content: "Reviews" },
-    { id: "Rating", content: "Rating" },
-    { id: "Dimensions", content: "Dimensions" },
-    { id: "...", content: <span>&#8230;</span> }
+    {
+      id: "Product Information",
+      content: <HeadContent content="Product Information" />
+    },
+    { id: "KPI", content: <HeadContent content="KPI" /> },
+    { id: "Avg Price", content: <HeadContent content="Avg Price" /> },
+    { id: "Avg Profit", content: <HeadContent content="Avg Profit" /> },
+    { id: "Avg Margin", content: <HeadContent content="Avg Margin" /> },
+    {
+      id: "Avg Daily Unit Sold",
+      content: <HeadContent content="Avg Daily Unit Sold" />
+    },
+    {
+      id: "Avg Daily Revenue",
+      content: <HeadContent content="Avg Daily Revenue" />
+    },
+    { id: "Avg ROI", content: <HeadContent content="Avg ROI" /> },
+    { id: "Avg Daily Rank", content: <HeadContent content="Avg Daily Rank" /> },
+    { id: "Reviews", content: <HeadContent content="Reviews" /> },
+    { id: "Rating", content: <HeadContent content="Rating" /> },
+    { id: "Dimensions", content: <HeadContent content="Dimensions" /> },
+    {
+      id: "...",
+      content: (
+        <span style={{ fontSize: 30, verticalAlign: 16, color: "#98AECA" }}>
+          &#8230;
+        </span>
+      )
+    }
   ];
+
   return (
     <thead>
       <tr>
@@ -53,6 +108,9 @@ const TableHead = props => {
           <Th key={id}>{content}</Th>
         ))}
       </tr>
+      <tr />
+      <tr />
+      <tr />
     </thead>
   );
 };

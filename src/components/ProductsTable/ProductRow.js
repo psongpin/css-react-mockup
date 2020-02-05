@@ -6,12 +6,13 @@ import Checkbox from "./Checkbox";
 import { formatPrice } from "../../utils/price";
 import { formatPercentage } from "../../utils/percentage";
 import ProductInfo from "./ProductInfo";
+import iconset from "../../images/iconset2.png";
 
 const Td = styled.td`
   border-top: 0.5px solid;
   border-bottom: 0.5px solid;
   border-color: ${({ theme }) => theme.colors.border};
-  padding: 10px;
+  padding: 16px 10px;
   height: 46px;
   text-align: ${({ align }) => align};
 
@@ -78,7 +79,9 @@ const ProductRow = ({ product }) => {
       <Td>
         <Text>{product.dimension}</Text>
       </Td>
-      <Td></Td>
+      <Td>
+        <img src={iconset} alt="icon set" />
+      </Td>
     </tr>
   );
 };
