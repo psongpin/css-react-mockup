@@ -18,7 +18,7 @@ const BottomInfo = styled.div`
   margin: 10px 0;
 
   @media (min-width: 1024px) {
-    flex-wrap: no-wrap;
+    flex-wrap: nowrap;
   }
 `;
 
